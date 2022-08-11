@@ -1,0 +1,13 @@
+.navbar{
+    background-color: brown;
+    width: 100vw;
+    height: 25vh;
+    margin-top:0px;
+}
+.navbar h2{
+display: flex;
+float: left;
+margin-left: 0px;
+margin-top: 50px;
+justify-content: center;
+}
