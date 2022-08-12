@@ -1,0 +1,83 @@
+.container{
+    position: relative;
+    background-color: rgba(57, 63, 84, 0.8);
+    margin-top: 60px;
+    margin-left: 400px;
+    margin-bottom: -50px;
+    gap: 10px;
+    display: flex;
+    align-items: flex-start;
+    border: 2px solid black;
+    height: 100px;
+    width: 650px;
+    border-radius: 20px;
+    background:#fff;
+    border: solid black;
+    border-color: black;
+    float:left; 
+    border-width: 3px 4px 3px 5px;
+    border-radius:95% 4% 92% 5%/4% 95% 6% 95%;
+    transform: rotate(2deg);
+    
+}
+.save {
+    width: 50px;
+    height: 40px;
+    margin-top: 30px;
+    margin-left: 45px;
+    background-color: transparent;
+    position: absolute;
+}
+
+.inptit{
+    width: 300px;
+    height: 30px;
+    margin-top: 30px;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    margin-left: 100px;
+    font-size: 30px;
+    border-color: black;
+    float:left; 
+    border-width: 3px 4px 3px 5px;
+    border-radius:95% 4% 92% 5%/4% 95% 6% 95%;
+    transform: rotate(2deg);
+
+}
+
+.checkbox{
+    width: 35px;
+    height: 40px;
+    margin-top: 2px;
+    margin-left: -4px;
+    position: absolute;
+}
+
+.delet{
+    position: absolute;
+    margin-left: 30px;
+    margin-top: -15px;
+    width: 50px;
+    height: 40px;
+}
+.update{
+    position: absolute;
+    margin-left: 65px;
+    width: 50px;
+    height: 40px;
+    margin-top: -15px;
+
+
+}
+
+.tit{
+    margin-top: 33px;
+    margin-left: 200px;
+
+}
+.crud{
+    position: absolute;
+    margin-left: 514px;
+    margin-top: 33px;
+
+}

@@ -1,12 +1,14 @@
 import React from 'react'
 import Task from './Task'
-import { useSelector } from 'react-redux'
-import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux'
+import { addFilter } from '../redux/filterSlice';
+import '../styles/listTask.css'
 
 const ListTask = () => {
+  const dispatch = useDispatch()
     const todos = useSelector((state) =>state.todos);
-    const [search, setSearch] = useState("")
-
+    const filter = useSelector((state) =>state.filter);
+    // const [filter, setFilter] = useState("all")
     // const todos=[
     //     { id:1 ,title:'todo1' ,done:false},
     //     { id:2 ,title:'todo2' ,done:false},
@@ -18,9 +20,14 @@ const ListTask = () => {
   return (
     <>
     <ul >
-    <input type="text" placeholder="search" onChange={(e)=>setSearch(e.target.value)}></input>
-
-			{todos.map((todo) => (
+    <div className='select'>
+    <select  onChange={(e)=>dispatch(addFilter(e.target.value))}>
+                <option value="All">All</option>
+                <option value="Done">Done</option>
+                <option value="Not Done">not Done</option>
+            </select>
+            </div>
+			{todos.filter(el=> filter=="All" ? el : filter=='Done' ? el.done==true: el.done==false).map((todo) => (
 				<Task id={todo.id} title={todo.title}  done={todo.done} />
 			))}
 		</ul>

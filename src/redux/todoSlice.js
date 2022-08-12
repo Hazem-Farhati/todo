@@ -5,7 +5,6 @@ const todoSlice = createSlice({
     initialState: [
         { id: 1, title: "todo1", done: false ,details:"first details"},
         { id: 2, title: "todo2", done: false ,details:"second details"},
-        { id: 3, title: "todo3", done: true ,details:"third details"},
     ],
     reducers: {
         addTodo: (state, action) => {

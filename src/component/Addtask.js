@@ -1,31 +1,23 @@
 import  { useState } from 'react';
 import {useDispatch} from 'react-redux'
 import { addTodo } from '../redux/todoSlice';
-
+import { FcPlus } from "react-icons/fc";
+import '../styles/addtask.css'
 const Addtask = () => {
     const dispatch = useDispatch();
-    const [task, setTask] = useState({
-        id:Math.random(),
-        title:"",
-        details:"",
-        Done:false,
-      });   
+    const [task, setTask] = useState({ });   
       
   const handleAdd =() => {dispatch(addTodo(task))}
   return (
     <>
-    <div >
-        <input type='text' placeholder='Add ur task' onChange={(e) => {
-        setTask({...task, title:e.target.value});
+    <div>
+        <input className='inptitle' type='text' placeholder='Add ur task' onChange={(e) => {
+        setTask({ title:e.target.value});
       }}/>
+     <button onClick={handleAdd}><FcPlus className='add' /> </button>
+     </div>
 
-{/* <input  placeholder='Add ur details' onChange={(e) => {
-        setTask({...task, details:e.target.value});
-      }}/> */}
-      
-     <button onClick={handleAdd}> Add new task </button>
-
-            </div>
+            
     </>
   )
 }
