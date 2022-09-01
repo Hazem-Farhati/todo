@@ -11,7 +11,6 @@ function App() {
       <Addtask/>
       
       <ListTask/>
-      <Task/>
     </div>
   );
 }
